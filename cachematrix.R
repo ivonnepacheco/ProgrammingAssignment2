@@ -49,7 +49,8 @@ x <- matrix(5:8, 2)
 
 functions <- makeCacheMatrix()  ## Create a variable storing the results of the function, in this case 4: 
                                 ## set, get, setInverse, getInverse
-functions$set(x)                ## Internally the matrix has been defined in functions
+functions$set(x)                ## Set the matrix in functions
 functions$get()                 ## This one displays the matrix created with set
 cacheSolve(functions)           ## Calculates the inverse because it has not been calculated
 x%*%cacheSolve(functions)       ## Uses the value of the cache to perform the calculation
+
